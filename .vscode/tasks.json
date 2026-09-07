@@ -2,28 +2,52 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "ESP-IDF 6.0.2: build",
+      "label": "ESP32 Blink: build",
       "type": "shell",
-      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && source /home/oleg/esp/esp-idf/export.sh && idf.py -B build-6.0.2 build",
-      "options": { "cwd": "${workspaceFolder}" },
+      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && export PATH=/home/oleg/.espressif/esp-idf-6.0.2/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin:$PATH && source /home/work/ESP-IDF/export.sh && idf.py -B build-6.0.2 build",
+      "options": {
+        "cwd": "${workspaceFolder}/examples/blink"
+      },
       "problemMatcher": "$gcc",
-      "group": { "kind": "build", "isDefault": true }
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     },
     {
-      "label": "ESP-IDF 6.0.2: monitor",
+      "label": "ESP32 Blink: monitor",
       "type": "shell",
-      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && source /home/oleg/esp/esp-idf/export.sh && idf.py -B build-6.0.2 -p /dev/ttyUSB0 monitor",
-      "options": { "cwd": "${workspaceFolder}" },
+      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && export PATH=/home/oleg/.espressif/esp-idf-6.0.2/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin:$PATH && source /home/work/ESP-IDF/export.sh && idf.py -B build-6.0.2 -p /dev/ttyUSB0 monitor",
+      "options": {
+        "cwd": "${workspaceFolder}/examples/blink"
+      },
       "problemMatcher": []
+    },
+    {
+      "label": "ESP32 HELLO: monitor",
+      "type": "shell",
+      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && export PATH=/home/oleg/.espressif/esp-idf-6.0.2/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin:$PATH && source /home/work/ESP-IDF/export.sh && idf.py -B build-6.0.2 -p /dev/ttyUSB0 monitor",
+      "options": {
+        "cwd": "${workspaceFolder}/examples/hello"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
     },
     {
       "label": "ESP32: QEMU server",
       "type": "shell",
-      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && source /home/oleg/esp/esp-idf/export.sh && exec idf.py -B build-6.0.2 qemu --gdb",
-      "options": { "cwd": "${workspaceFolder}" },
+      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && export PATH=/home/oleg/.espressif/esp-idf-6.0.2/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin:$PATH && source /home/work/ESP-IDF/export.sh && exec idf.py -B build-6.0.2 qemu --gdb",
+      "options": {
+        "cwd": "${workspaceFolder}/examples/blink"
+      },
       "problemMatcher": {
         "owner": "qemu",
-        "pattern": { "regexp": ".*" },
+        "pattern": {
+          "regexp": ".*"
+        },
         "background": {
           "activeOnStart": true,
           "beginsPattern": "Running qemu",
@@ -35,11 +59,15 @@
     {
       "label": "ESP32 Wi-Fi: QEMU server",
       "type": "shell",
-      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && source /home/oleg/esp/esp-idf/export.sh && exec idf.py -B build-6.0.2 qemu --gdb",
-      "options": { "cwd": "${workspaceFolder}/examples/wifi" },
+      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && export PATH=/home/oleg/.espressif/esp-idf-6.0.2/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin:$PATH && source /home/work/ESP-IDF/export.sh && exec idf.py -B build-6.0.2 qemu --gdb",
+      "options": {
+        "cwd": "${workspaceFolder}/examples/wifi"
+      },
       "problemMatcher": {
         "owner": "qemu",
-        "pattern": { "regexp": ".*" },
+        "pattern": {
+          "regexp": ".*"
+        },
         "background": {
           "activeOnStart": true,
           "beginsPattern": "Running qemu",

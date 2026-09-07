@@ -1,24 +1,24 @@
 {
   "folders": [
     {
-      "name": "ESP32-BLINK",
+      "name": "ESP32 workspace",
       "path": "."
     },
     {
-      "name": "Другие прикладные проекты",
-      "path": "projects"
+      "name": "ESP32 Blink",
+      "path": "examples/blink"
     },
     {
-      "name": "ESP-IDF SDK",
-      "path": "../ESP-IDF"
+      "name": "ESP32 Wi-Fi",
+      "path": "examples/wifi"
     },
     {
-      "name": "Примеры ESP-IDF",
-      "path": "../ESP-IDF/examples"
+      "name": "ESP32 HELLO",
+      "path": "examples/hello"
     }
   ],
   "settings": {
-    "idf.espIdfPath": "/home/oleg/esp/esp-idf",
+    "idf.espIdfPath": "/home/work/ESP-IDF",
     "idf.toolsPath": "/home/oleg/.espressif/esp-idf-6.0.2",
     "idf.adapterTargetName": "esp32",
     "files.exclude": {

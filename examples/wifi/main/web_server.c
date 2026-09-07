@@ -103,6 +103,8 @@ static void start_wifi_ap(void)
 /** Инициализирует GPIO, Wi-Fi и HTTP-сервер. */
 void app_main(void)
 {
+    ESP_LOGI(TAG, "HELLO ESP32");
+
     esp_err_t nvs_result = nvs_flash_init();
     if (nvs_result == ESP_ERR_NVS_NO_FREE_PAGES ||
         nvs_result == ESP_ERR_NVS_NEW_VERSION_FOUND) {
