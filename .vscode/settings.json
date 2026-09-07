@@ -1,0 +1,36 @@
+{
+  "idf.adapterTargetName": "esp32",
+  "idf.port": "/dev/ttyUSB0",
+  "idf.flashType": "UART",
+  "idf.buildDirectory": "${workspaceFolder}/build-6.0.2",
+  "idf.espIdfPath": "/home/oleg/esp/esp-idf",
+  "idf.toolsPath": "/home/oleg/.espressif/esp-idf-6.0.2",
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.default.compileCommands": "/home/work/ESP32/build-6.0.2/compile_commands.json",
+  "C_Cpp.default.compilerPath": "/home/oleg/.espressif/esp-idf-6.0.2/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc",
+  "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
+  "editor.multiCursorModifier": "alt",
+  "editor.hover.enabled": "on",
+  "editor.hover.delay": 150,
+  "editor.hover.sticky": true,
+  "editor.parameterHints.enabled": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.selectionHighlight": true,
+  "editor.occurrencesHighlight": "singleFile",
+  "editor.definitionLinkOpensInPeek": false,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "files.exclude": {
+    "**/.git": true,
+    "**/build": true
+  },
+  "C_Cpp.dimInactiveRegions": false
+}

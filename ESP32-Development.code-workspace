@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "name": "ESP32-BLINK",
+      "path": "."
+    },
+    {
+      "name": "Другие прикладные проекты",
+      "path": "projects"
+    },
+    {
+      "name": "ESP-IDF SDK",
+      "path": "../ESP-IDF"
+    },
+    {
+      "name": "Примеры ESP-IDF",
+      "path": "../ESP-IDF/examples"
+    }
+  ],
+  "settings": {
+    "idf.espIdfPath": "/home/oleg/esp/esp-idf",
+    "idf.toolsPath": "/home/oleg/.espressif/esp-idf-6.0.2",
+    "idf.adapterTargetName": "esp32",
+    "files.exclude": {
+      "**/.git": true,
+      "**/build": true
+    }
+  }
+}

@@ -1,0 +1,3 @@
+CONFIG_IDF_TARGET="esp32"
+# Фактический объём Flash платы: 4 MB.
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y

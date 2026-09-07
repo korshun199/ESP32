@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ESP-IDF 6.0.2: build",
+      "type": "shell",
+      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && source /home/oleg/esp/esp-idf/export.sh && idf.py -B build-6.0.2 build",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": "$gcc",
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "ESP-IDF 6.0.2: monitor",
+      "type": "shell",
+      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && source /home/oleg/esp/esp-idf/export.sh && idf.py -B build-6.0.2 -p /dev/ttyUSB0 monitor",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "ESP32: QEMU server",
+      "type": "shell",
+      "command": "export IDF_TOOLS_PATH=/home/oleg/.espressif/esp-idf-6.0.2 && source /home/oleg/esp/esp-idf/export.sh && idf.py -B build-6.0.2 qemu --gdb monitor",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": {
+        "owner": "qemu",
+        "pattern": { "regexp": ".*" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Running qemu",
+          "endsPattern": "Waiting for GDB to connect"
+        }
+      },
+      "isBackground": true
+    }
+  ]
+}

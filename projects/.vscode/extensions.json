@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "espressif.esp-idf-extension",
+    "espressif.esp-idf-web",
+    "llvm-vs-code-extensions.vscode-clangd",
+    "ms-python.python",
+    "ms-vscode.vscode-serial-monitor",
+    "openai.chatgpt"
+  ],
+  "unwantedRecommendations": [
+    "platformio.platformio-ide",
+    "moozzyk.arduino"
+  ]
+}

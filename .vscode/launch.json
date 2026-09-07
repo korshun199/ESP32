@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "cppdbg",
+      "request": "launch",
+      "name": "ESP-IDF: отладка через JTAG/OpenOCD",
+      "program": "${workspaceFolder}/build-6.0.2/esp32_blink.elf",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/home/oleg/.espressif/esp-idf-6.0.2/tools/xtensa-esp-elf-gdb/17.1_20260402/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gdb",
+      "miDebuggerServerAddress": "localhost:3333",
+      "stopAtEntry": true,
+      "setupCommands": [
+        { "text": "set remotetimeout 20", "ignoreFailures": false },
+        { "text": "thbreak app_main", "ignoreFailures": false }
+      ]
+    },
+    {
+      "type": "cppdbg",
+      "request": "launch",
+      "name": "ESP32: QEMU Debug",
+      "preLaunchTask": "ESP32: QEMU server",
+      "program": "${workspaceFolder}/build-6.0.2/esp32_blink.elf",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/home/oleg/.espressif/esp-idf-6.0.2/tools/xtensa-esp-elf-gdb/17.1_20260402/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gdb",
+      "miDebuggerServerAddress": "localhost:3333",
+      "stopAtEntry": true,
+      "setupCommands": [
+        { "text": "set remotetimeout 20", "ignoreFailures": false },
+        { "text": "thbreak app_main", "ignoreFailures": false }
+      ]
+    }
+  ]
+}
